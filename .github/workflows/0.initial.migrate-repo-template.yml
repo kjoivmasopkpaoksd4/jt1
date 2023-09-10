@@ -63,9 +63,6 @@ jobs:
 
       - name: Checkout project sources
         uses: actions/checkout@v4
-        with:
-          ref: main
-          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Migrate
         env:
@@ -158,5 +155,7 @@ jobs:
 
       # Push changes
       - name: Push changes
-        run: |
-          git push origin main
+        uses: ad-m/github-push-action@v0.6.0
+        with:
+          branch: main
+          github_token: ${{ secrets.GITHUB_TOKEN }}
