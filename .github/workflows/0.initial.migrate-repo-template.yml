@@ -144,11 +144,14 @@ jobs:
           git add .
           git status
           git commit -m "chore: INITIAL Migrate Repo Template"
-
+      
       # Push changes
       - name: Push changes
-        run: |
-          git push origin main
+        uses: ad-m/github-push-action@v0.6.0
+        with:
+          branch: main
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+
 
   migrate_repo_template_2:
     name: Run Migration (part 2)
@@ -187,8 +190,10 @@ jobs:
           git add .
           git status
           git commit -m "chore: removes migrate-repo-template workflow yml"
-
+      
       # Push changes
       - name: Push changes
-        run: |
-          git push origin main
+        uses: ad-m/github-push-action@v0.6.0
+        with:
+          branch: main
+          github_token: ${{ secrets.GITHUB_TOKEN }}
