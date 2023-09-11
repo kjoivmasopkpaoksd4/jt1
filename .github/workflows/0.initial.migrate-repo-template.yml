@@ -148,9 +148,6 @@ jobs:
           
           # CODE_OF_CONDUCT
           sed -i "s/info@thriving.dev/$INPUT_EMAIL/g" CODE_OF_CONDUCT.md
-          
-          # cleanup this very GitHub Actions workflow yml
-          rm .github/workflows/0.initial.migrate-repo-template.yml
 
       - name: Commit files
         run: |
