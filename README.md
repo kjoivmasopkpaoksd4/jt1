@@ -9,4 +9,4 @@
 All set up, enjoy the template.
 
 ### TODOs
-- document jow to use the pipeline
+- document how to use the pipeline
